@@ -10,7 +10,7 @@
     "clear": "rm -rf build",
     "watch_ts": "tsc -w",
     "dev_hot_reload": "ts-node-dev --respawn  --transpile-only ./main/index.ts",
-    "buildProd": "npm run clear && npm run tsc &&  npm run clearTest ",
+    "buildProd": "npm run clear && tsc &&  npm run clearTest ",
     "start": "npm run buildProd  && node ./build/main/index.js",
     "generate_doc": "typedoc"
   },
