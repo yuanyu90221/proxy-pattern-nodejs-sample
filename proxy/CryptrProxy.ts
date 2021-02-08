@@ -1,8 +1,8 @@
 const Cryptr = require('cryptr');
-interface KeyValue {
-  [key: string]: any;
-}
+import KeyValue from '../interfaces/keyValue.interface';
+
 export default class CryptrProxy {
+  
   private encObj: KeyValue = { value: null };
   private decObj: KeyValue = { value: null };
 

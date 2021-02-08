@@ -3,6 +3,8 @@ import Sender from '../persons/sender'
 import ProxyReceiver from '../persons/receiver.proxy';
 import BankProxy from '../proxy/BankProxy';
 import CryptrProxy from '../proxy/CryptrProxy';
+import ObserveProxy from '../proxy/ObjectProxy';
+import KeyValue from '../interfaces/keyValue.interface';
 const Xiaoming = new Sender();
 const A = new Receiver();
 const B = new ProxyReceiver(A);
@@ -29,3 +31,7 @@ encObj.description = 'Programing Tutorials';
 console.log(encObj);
 const decObj = crtptrProxy.decrypt(encObj, secretKey);
 console.log(decObj);
+const reactive = new ObserveProxy(obj, (res:KeyValue)=>console.log(res)).getObserveObj();
+reactive.age = 3;
+reactive.description = 'Programming Tutorials1';
+console.log(obj);
