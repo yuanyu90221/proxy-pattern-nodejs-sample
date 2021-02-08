@@ -9,7 +9,7 @@
     "clearTest": "rm -rf ./build/__tests__",
     "clear": "rm -rf build",
     "watch_ts": "tsc -w",
-    "dev_hot_reload": "ts-node-dev --respawn  --transpile-only ./main/index.ts",
+    "dev": "ts-node-dev --respawn  --transpile-only ./main/index.ts",
     "buildProd": "npm run clear && tsc &&  npm run clearTest ",
     "start": "npm run buildProd  && node ./build/main/index.js",
     "generate_doc": "typedoc"
@@ -26,5 +26,8 @@
     "ts-node-dev": "^1.1.1",
     "typedoc": "^0.20.16",
     "typescript": "^4.1.3"
+  },
+  "dependencies": {
+    "cryptr": "^6.0.2"
   }
 }
